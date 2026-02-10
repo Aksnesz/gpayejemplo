@@ -10,7 +10,7 @@ import {
 } from "react-native";
 
 const STRIPE_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY!;
-const API_URL = "http://192.168.137.85:3000";
+const API_URL = process.env.IP_SV || "http://localhost:3000";
 
 function PaymentScreen() {
   const { initPaymentSheet, presentPaymentSheet } = useStripe();
